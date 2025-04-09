@@ -1,5 +1,5 @@
-import { styled } from '@mui/system'; 
-import { Button, Typography, Container } from "@mui/material";
+import { styled } from '@mui/system';
+import { Typography, Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Avatar from "../../../../assets/images/avatar.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
@@ -63,9 +63,18 @@ const Hero = () => {
                   xs: 12,
                   md: 4
                 }}>
-                <Button variant="contained" color="secondary" startIcon={<DownloadIcon />}>
+                <StyledButton>
+                  <DownloadIcon />
                   Download CV
-                </Button>
+                </StyledButton>
+              </Grid>
+              <Grid
+                display="flex"
+                justifyContent="center"
+                size={{
+                  xs: 12,
+                  md: 4
+                }}>
               </Grid>
 
               <Grid
@@ -75,19 +84,10 @@ const Hero = () => {
                   xs: 12,
                   md: 4
                 }}>
-                <StyledButton />
-              </Grid>
-
-              <Grid
-                display="flex"
-                justifyContent="center"
-                size={{
-                  xs: 12,
-                  md: 4
-                }}>
-                <Button variant="outlined" color="primary" startIcon={<EmailIcon />}>
+                <StyledButton>
+                  <EmailIcon />
                   Meus Contatos
-                </Button>
+                </StyledButton>
               </Grid>
             </Grid>
           </Grid>

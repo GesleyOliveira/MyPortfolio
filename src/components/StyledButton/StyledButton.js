@@ -1,3 +1,5 @@
+
+
 import { jsx as _jsx } from "react/jsx-runtime";
 import { styled } from "@mui/system"; // ✅
 const ButtonStyled = styled("button")(() => ({
@@ -18,3 +20,4 @@ const StyledButton = () => {
     return _jsx(ButtonStyled, { children: "texto" });
 };
 export default StyledButton;
+

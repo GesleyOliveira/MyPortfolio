@@ -1,22 +1,36 @@
-import { styled } from "@mui/system"; // ✅
+import { styled } from "@mui/system";
+import { ReactNode } from "react";
 
-const ButtonStyled = styled("button")(() => ({
+interface StyledButtonProps {
+  children: React.ReactNode;
+}
+
+const ButtonStyled = styled("button")(({ theme }) => ({
   backgroundColor: "transparent",
-  color: "white",
-  borderRadius: "4px",
-  padding: "8px 16px",
-  border: "none",
+  border: `1px solid ${theme.palette.primary.contrastText}`,
+  borderRadius: "3px",
+  padding: "5px 15px",
+  width: "100%",
+  color: theme.palette.primary.contrastText,
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "10px",
   cursor: "pointer",
   "&:hover": {
-    backgroundColor: "darkred",
-  },
-  "&:active": {
-    backgroundColor: "lightcoral",
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.primary.main,
   },
 }));
 
-const StyledButton = () => {
-  return <ButtonStyled>texto</ButtonStyled>;
+const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
+  return (
+    <ButtonStyled>
+      {children}
+    </ButtonStyled>
+  );
 };
 
 export default StyledButton;
+
+
