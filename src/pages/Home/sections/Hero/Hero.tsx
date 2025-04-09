@@ -5,11 +5,12 @@ import Avatar from "../../../../assets/images/avatar.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
+import theme from "../../../../../src/theme";
 
 
 
 const StyledHero = styled("div")(() => ({
-  backgroundColor: "black",
+  backgroundColor: theme.palette.primary.main,
   height: "100vh",
   display: "flex",
   alignItems: "center",
@@ -55,7 +56,7 @@ const Hero = () => {
               Desenvolvimento de Software
             </Typography>
 
-            <Grid container spacing={2} justifyContent="center" mt={2}>
+            <Grid container display={"flex"} justifyContent="center" spacing={3}>
               <Grid
                 display="flex"
                 justifyContent="center"
@@ -65,7 +66,9 @@ const Hero = () => {
                 }}>
                 <StyledButton>
                   <DownloadIcon />
-                  Download CV
+                  <Typography>
+                    Download CV
+                  </Typography>
                 </StyledButton>
               </Grid>
               <Grid
@@ -75,18 +78,11 @@ const Hero = () => {
                   xs: 12,
                   md: 4
                 }}>
-              </Grid>
-
-              <Grid
-                display="flex"
-                justifyContent="center"
-                size={{
-                  xs: 12,
-                  md: 4
-                }}>
                 <StyledButton>
                   <EmailIcon />
-                  Meus Contatos
+                  <Typography>
+                    Meus Contatos
+                  </Typography>
                 </StyledButton>
               </Grid>
             </Grid>
