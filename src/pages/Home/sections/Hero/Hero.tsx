@@ -1,6 +1,6 @@
 import { styled } from '@mui/system'; 
 import { Button, Typography, Container } from "@mui/material";
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from "@mui/material/Grid";
 import Avatar from "../../../../assets/images/avatar.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
