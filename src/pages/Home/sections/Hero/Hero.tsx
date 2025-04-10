@@ -1,4 +1,4 @@
-import { styled } from '@mui/system';
+import { styled, Box } from '@mui/system';
 import { Typography, Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Avatar from "../../../../assets/images/avatar.jpg";
@@ -7,7 +7,6 @@ import EmailIcon from "@mui/icons-material/Email";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import theme from "../../../../../src/theme";
 import { AnimatedBackground } from 'components/AnimatedBackground/AnimatedBackground';
-import { Box } from "@mui/system";
 
 
 

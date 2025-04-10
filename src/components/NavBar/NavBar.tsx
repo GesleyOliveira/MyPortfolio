@@ -1,11 +1,11 @@
-import { AppBar, MenuItem } from "@mui/material"
+import { AppBar, MenuItem, Toolbar } from "@mui/material"
 import { styled } from '@mui/system';
 
 
 
 const NavBar = () => {
 
-    const StyledToobar = styled("img")(({ theme }) => ({
+    const StyledToolbar = styled(Toolbar)(() => ({
         display: "flex",
         justifyContent: "space-evenly",
     }));
@@ -14,14 +14,14 @@ const NavBar = () => {
     return (
         <>
             <AppBar position="absolute">
-                <StyledToobar>
+                <StyledToolbar>
                     <MenuItem>Sobre</MenuItem>
                     <MenuItem>Habilidades</MenuItem>
                     <MenuItem>Projetos</MenuItem>
-                </StyledToobar>
+                </StyledToolbar>
             </AppBar>
         </>
-    )
-}
+    );
+};
 
 export default NavBar
