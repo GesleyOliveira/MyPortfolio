@@ -78,7 +78,7 @@ const Hero = () => {
                   xs: 12,
                   md: 4
                 }}>
-                <StyledButton>
+                <StyledButton onClick={() => console.log("Download CV")}>
                   <DownloadIcon />
                   <Typography>
                     Download CV
@@ -92,7 +92,7 @@ const Hero = () => {
                   xs: 12,
                   md: 4
                 }}>
-                <StyledButton>
+                <StyledButton onClick={() => console.log("Meus Contatos")}>
                   <EmailIcon />
                   <Typography>
                     Meus Contatos

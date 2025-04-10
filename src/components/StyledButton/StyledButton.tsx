@@ -1,11 +1,13 @@
 import { styled } from "@mui/system";
-import { ReactNode } from "react";
+import React from "react";
 
 interface StyledButtonProps {
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
-const ButtonStyled = styled("button")(({ theme }) => ({
+
+const ButtonBase = styled("button")(({ theme }) => ({
   backgroundColor: "transparent",
   border: `1px solid ${theme.palette.primary.contrastText}`,
   borderRadius: "3px",
@@ -19,18 +21,15 @@ const ButtonStyled = styled("button")(({ theme }) => ({
   cursor: "pointer",
   "&:hover": {
     backgroundColor: theme.palette.secondary.main,
-    color: theme.palette.primary.main,
   },
 }));
 
-const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
+const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
   return (
-    <ButtonStyled>
+    <ButtonBase onClick={onClick}>
       {children}
-    </ButtonStyled>
+    </ButtonBase>
   );
 };
 
 export default StyledButton;
-
-
