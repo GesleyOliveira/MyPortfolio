@@ -9,6 +9,7 @@ import theme from "../../../../../src/theme";
 
 
 
+
 const StyledHero = styled("div")(() => ({
   backgroundColor: theme.palette.primary.main,
   height: "100vh",
@@ -16,20 +17,21 @@ const StyledHero = styled("div")(() => ({
   alignItems: "center",
 }));
 
-const StyledImg = styled("img")(() => ({
-  width: "100%",
+const StyledImg = styled("img")(({ theme }) => ({
+  width: "80%",
   borderRadius: "50%",
+  border: `1px solid ${theme.palette.primary.contrastText}`,
 }));
 
 const Hero = () => {
   return (
     <StyledHero>
       <Container maxWidth="lg">
-        <Grid container spacing={4} alignItems="center">
+        <Grid container spacing={2}>
           <Grid
             size={{
               xs: 12,
-              md: 4
+              md: 5
             }}>
             <StyledImg src={Avatar} alt="Avatar" />
           </Grid>
@@ -37,11 +39,11 @@ const Hero = () => {
           <Grid
             size={{
               xs: 12,
-              md: 8
+              md: 7
             }}>
             <Typography
               color="primary.contrastText"
-              variant="h3"
+              variant="h1"
               textAlign="center"
               gutterBottom
             >
@@ -49,7 +51,7 @@ const Hero = () => {
             </Typography>
             <Typography
               color="primary.contrastText"
-              variant="h5"
+              variant="h2"
               textAlign="center"
               gutterBottom
             >
