@@ -6,6 +6,8 @@ import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import theme from "../../../../../src/theme";
+import { AnimatedBackground } from 'components/AnimatedBackground/AnimatedBackground';
+import { Box } from "@mui/system";
 
 
 
@@ -33,7 +35,14 @@ const Hero = () => {
               xs: 12,
               md: 5
             }}>
-            <StyledImg src={Avatar} alt="Avatar" />
+            <Box position="relative">
+              <Box position="absolute" width={"150%"} top={-100} right={0}>
+                <AnimatedBackground />
+              </Box>
+              <Box position="relative" textAlign={"center"}>
+                <StyledImg src={Avatar} alt="Avatar" />
+              </Box>
+            </Box>
           </Grid>
 
           <Grid
@@ -45,7 +54,7 @@ const Hero = () => {
               color="primary.contrastText"
               variant="h1"
               textAlign="center"
-              gutterBottom
+              pb={2}
             >
               Gesley de Oliveira Rosa
             </Typography>
@@ -53,12 +62,10 @@ const Hero = () => {
               color="primary.contrastText"
               variant="h2"
               textAlign="center"
-              gutterBottom
             >
               Desenvolvimento de Software
             </Typography>
-
-            <Grid container display={"flex"} justifyContent="center" spacing={3}>
+            <Grid container display={"flex"} justifyContent="center" spacing={3} pt={3}>
               <Grid
                 display="flex"
                 justifyContent="center"
