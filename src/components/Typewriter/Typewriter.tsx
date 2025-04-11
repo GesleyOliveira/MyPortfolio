@@ -1,6 +1,6 @@
 import { Typography, TypographyProps } from "@mui/material";
-
 import { useEffect, useState } from "react";
+
 
 interface TypewriterProps {
     text: string;
@@ -26,7 +26,17 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, delay, variant, color }) 
         }
     }, [currentIndex, delay, text]);
 
-    return <Typography variant={variant} color={color} textAlign="center">{currentText}</Typography>;
+    return <Typography variant={variant} color={color} textAlign="center"
+    sx={{
+        whiteSpace: "normal",
+        overflow: "hidden",
+        minHeight: "4.5rem",
+        maxWidth: "700px",
+        margin: "0 auto",
+      }}
+        >
+        {currentText}
+    </Typography>;
 }
 
 export default Typewriter

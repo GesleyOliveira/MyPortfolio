@@ -81,7 +81,7 @@ export default function Navbar() {
                             <StyledNavLink>Sobre</StyledNavLink>
                         </MenuItem>
                         <MenuItem onClick={() => handleSmoothScroll("skills")}>
-                            <StyledNavLink>Habilidades</StyledNavLink>
+                            <StyledNavLink>Habilidades em Desenvolvimento</StyledNavLink>
                         </MenuItem>
                         <MenuItem onClick={() => handleSmoothScroll("projects")}>
                             <StyledNavLink>Projetos</StyledNavLink>

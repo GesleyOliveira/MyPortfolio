@@ -16,7 +16,7 @@ const AboutSection: React.FC = () => {
     }));
 
     const skillsSet = [
-        "Python", "Java", "Javascript", "Typescript", "React", "Git", "HTML", "CSS", "MongoDB", "AWS", "Firebase", "SQL", "Material UI", "Figma"
+        "Python", "Java", "Javascript", "Typescript", "React", "MongoDB", "Firebase", "SQL"
     ]
 
     return (
@@ -30,9 +30,9 @@ const AboutSection: React.FC = () => {
                         <AnimationComponent moveDirection="right">
                             <StyledCard variant="outlined">
                                 <WorkspacePremiumIcon />
-                                <Typography textAlign="center" fontWeight={600}>Experiência</Typography>
-                                <Typography textAlign="center">0.5 Ano</Typography>
-                                <Typography textAlign="center">Frontend Development</Typography>
+                                <Typography textAlign="center" fontWeight={600}>Cursando</Typography>
+                                <Typography textAlign="center">Desenvolvimento de Software</Typography>
+                                <Typography textAlign="center" fontWeight={1000}>Fatec Votorantim</Typography>
                             </StyledCard>
                         </AnimationComponent>
                     </Grid>
@@ -41,8 +41,8 @@ const AboutSection: React.FC = () => {
                             <StyledCard variant="outlined">
                                 <SchoolIcon />
                                 <Typography textAlign="center" fontWeight={600}>Formação</Typography>
-                                <Typography textAlign="center">Grau de Bacharelado</Typography>
-                                <Typography textAlign="center">Engenheiro de Produção</Typography>
+                                <Typography textAlign="center">Engenharia de Produção</Typography>
+                                <Typography textAlign="center"fontWeight={1000}>Universidade de Sorocaba</Typography>
                             </StyledCard>
                         </AnimationComponent>
                     </Grid>
@@ -58,7 +58,7 @@ const AboutSection: React.FC = () => {
                 </Box>
                 <hr />
                 <Box id="skills" pt={1} mb={3}>
-                    <Typography variant="h3" textAlign="center" fontWeight={300}>Habilidades</Typography>
+                    <Typography variant="h3" textAlign="center" fontWeight={300}>Habilidades em Desenvolvimento</Typography>
                 </Box>
                 <Box mb={5}>
                     <Grid container spacing={3} justifyContent="center">
