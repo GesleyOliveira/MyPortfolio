@@ -30,9 +30,15 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, delay, variant, color }) 
     sx={{
         whiteSpace: "normal",
         overflow: "hidden",
-        minHeight: "4.5rem",
+        lineHeight: 1.4,
+        minHeight: "12rem",
+        height: { xs: "6rem", md: "7rem" },
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
         maxWidth: "700px",
         margin: "0 auto",
+        textAlign: "center",
       }}
         >
         {currentText}
