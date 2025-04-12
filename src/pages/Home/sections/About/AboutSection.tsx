@@ -7,6 +7,8 @@ import AnimationComponent from "../../../../components/AnimationComponent/Animat
 const AboutSection: React.FC = () => {
 
     const StyledCard = styled(Card)(({ theme }) => ({
+        height: "100%",
+        flexDirection: "column",
         padding: "10px 10px",
         textAlign: "center",
         marginBottom: "10px",
@@ -26,7 +28,7 @@ const AboutSection: React.FC = () => {
                     <Typography variant="h2" textAlign="center" >Sobre Mim</Typography>
                 </Box>
                 <Grid container spacing={2} display="flex" justifyContent="center" pb={3}>
-                    <Grid size={{ xs: 9, md: 2.5 }}>
+                    <Grid size={{ xs: 9, md: 3 }}>
                         <AnimationComponent moveDirection="right">
                             <StyledCard variant="outlined">
                                 <WorkspacePremiumIcon />
@@ -36,7 +38,7 @@ const AboutSection: React.FC = () => {
                             </StyledCard>
                         </AnimationComponent>
                     </Grid>
-                    <Grid size={{ xs: 9, md: 2.5 }}>
+                    <Grid size={{ xs: 9, md: 3 }}>
                         <AnimationComponent moveDirection="left">
                             <StyledCard variant="outlined">
                                 <SchoolIcon />
@@ -49,8 +51,6 @@ const AboutSection: React.FC = () => {
                 </Grid>
                 <Box pb={1}>
                     <Typography>
-                        Meu nome é Gesley de Oliveira Rosa, sou formado em Engenharia de Produção pela Universidade de Sorocaba e, atualmente, estou cursando Desenvolvimento de Software Multiplataforma pela Faculdade de Tecnologia de Votorantim.
-
                         Em minha atual graduação, desenvolvi uma aplicação com o tema “Cidades Inteligentes”, para um projeto de Iniciação Científica que envolveu a modelagem de dados e exibição de informações relacionados a meteorologia para acompanhamento de histórico e tomada de decisões.
 
                         Sou uma pessoa proativa, dedicada, organizado e procuro aprender sempre e me desenvolver profissionalmente, comprometido com o meu crescimento profissional.  

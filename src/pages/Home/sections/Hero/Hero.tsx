@@ -14,23 +14,28 @@ import CV from "../../../../assets/pdfs/Open.pdf"
 
 const Hero: React.FC = () => {
 
-  const StyledHero = styled("div")(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
-    height: "100vh",
-    display: "flex",
-    alignItems: "center",
-    [theme.breakpoints.up("xs")]: {
-      paddingTop: "100px",
-    },
-    [theme.breakpoints.up("md")]: {
-      paddingTop: "0",
-    },
-  }));
 
   const StyledImg = styled("img")(({ theme }) => ({
-    width: "75%",
+    width: "80%",
     borderRadius: "50%",
     border: `1px solid ${theme.palette.primary.contrastText}`,
+    position: "relative",
+  }));
+
+  const StyledHero = styled("div")(({ theme }) => ({
+    backgroundColor: theme.palette.primary.main,
+    width: "100%",
+    [theme.breakpoints.up("xs")]: {
+      display: "block",
+      padding: "20px",
+      paddingTop: "100px",    
+      paddingBottom: "40px",
+    },
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      alignItems: "center",
+      height: "100vh",
+    },
   }));
 
   const handleDownload = () => {
@@ -50,7 +55,7 @@ const Hero: React.FC = () => {
   const handleEmail = () => {
     const emailAddress = 'example@example.com';
     const subject = 'Subject';
-    const body = 'Hello! I saw your portfolio...';
+    const body = 'Olá, Eu vi o seu portfólio...';
 
     const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink);
@@ -60,39 +65,24 @@ const Hero: React.FC = () => {
     <StyledHero>
       <Container maxWidth="lg">
         <Grid container spacing={2}>
-          <Grid
-            size={{
-              xs: 12,
-              md: 5
-            }}>
-            <Box position="relative">
+          <Grid size={{ xs: 12, md: 5 }}>
+            <Box position="relative" pb={3}>
               <Box position="absolute" width={"150%"} top={-100} right={0}>
                 <AnimatedBackground />
               </Box>
-              <Box position="relative" textAlign={"center"}>
+              <Box textAlign={"center"}>
                 <StyledImg src={Avatar} alt="Avatar" />
               </Box>
             </Box>
           </Grid>
-
-          <Grid
-            size={{
-              xs: 12,
-              md: 7
-            }}>
+          <Grid size={{ xs: 12, md: 7 }}>
             <Typography color="primary.contrastText" variant="h1" pb={2} textAlign="center">
               Gesley de Oliveira Rosa
             </Typography>
             <Typewriter text="Desenvolvimento de Software Multiplataforma" delay={120} variant="h2" color="primary.contrastText" />
             <Box mt={3}>
-              <Grid container display={"flex"} justifyContent="center" spacing={3} pt={3}>
-                <Grid
-                  display="flex"
-                  justifyContent="center"
-                  size={{
-                    xs: 12,
-                    md: 4
-                  }}>
+              <Grid container spacing={3} display={"flex"} justifyContent="center" >
+                <Grid size={{ xs: 10, md: 4 }}>
                   <StyledButton onClick={() => handleDownload()}>
                     <DownloadIcon />
                     <Typography>
@@ -100,13 +90,7 @@ const Hero: React.FC = () => {
                     </Typography>
                   </StyledButton>
                 </Grid>
-                <Grid
-                  display="flex"
-                  justifyContent="center"
-                  size={{
-                    xs: 12,
-                    md: 4
-                  }}>
+                <Grid size={{ xs: 10, md: 4 }}>
                   <StyledButton onClick={() => handleEmail()}>
                     <EmailIcon />
                     <Typography>
