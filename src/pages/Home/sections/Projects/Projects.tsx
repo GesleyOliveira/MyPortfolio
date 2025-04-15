@@ -11,13 +11,13 @@ const Projects: React.FC = () => {
 
     const projects = [
         {
-            title: "Project Exemple",
-            subtitle: "Jul 2023 - Dez 2023",
-            srcImg: "/src/assets/images/project-trello.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta semper velit vel rutrum. Aliquam vulputate, nisi eget tristique mattis, nisi sem faucibus eros, a auctor felis sem ut mauris. Phasellus a ultrices elit. Curabitur ut diam eu orci auctor pretium.",
-            technologies: "Technologies: JavaScript, HTML, CSS, Canvas Graphics",
-            websiteURL: "https://trello.com/",
-            codeURL: "https://github.com/",
+            title: "Projeto New Weather",
+            subtitle: "Jan 2023 - Dez 2023",
+            srcImg: "/src/assets/images/newweather.png",
+            description: "Projeto elaborado para exibir informações e notícias do clima-tempo em tempo real. O projeto foi desenvolvido utilizando a API OpenWeatherMap, que fornece dados meteorológicos atualizados.",
+            technologies: "Tecnologias: JavaScript, HTML, CSS, Angular, Bootstrap, API OpenWeatherMap",
+            websiteURL: "https://gesleyoliveira.github.io/NewWeather/",
+            codeURL: "https://github.com/GesleyOliveira/NewWeather",
         },
         {
             title: "Project Exemple",
