@@ -1,5 +1,8 @@
 import { Box } from "@mui/material"
 
+export * from './AnimatedBackground';
+
+
 export const AnimatedBackground = () => {
     return (
         <Box>
