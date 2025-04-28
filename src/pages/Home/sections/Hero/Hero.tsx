@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
             <Typography color="primary.contrastText" variant="h1" pb={2} textAlign="center">
               Gesley de Oliveira Rosa
             </Typography>
-            <Typewriter text="Desenvolvimento de Software Multiplataforma" delay={120} variant="h2" color="primary.contrastText" />
+            <Typewriter text="Desenvolvedor Full Stack" delay={120} variant="h2" color="primary.contrastText" />
             <Box mt={3}>
               <Grid container spacing={3} display={"flex"} justifyContent="center" >
                 <Grid size={{ xs: 10, md: 4 }}>

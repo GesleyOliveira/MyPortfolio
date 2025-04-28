@@ -1,6 +1,8 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material";
 import ProjectCard, { ProjectCardProps } from "../../../../components/ProjectCard/ProjectCard";
 import AnimationComponent from "../../../../components/AnimationComponent/AnimationComponent";
+import newWeatherImg from '@/assets/images/newweather.png';
+import pomodoroImg from '@/assets/images/pomodoro.png';
 
 const Projects: React.FC = () => {
 
@@ -13,38 +15,20 @@ const Projects: React.FC = () => {
         {
             title: "Projeto New Weather",
             subtitle: "Jan 2023 - Dez 2023",
-            srcImg: "/src/assets/images/newweather.png",
+            srcImg: newWeatherImg,
             description: "Projeto elaborado para exibir informações e notícias do clima-tempo em tempo real. O projeto foi desenvolvido utilizando a API OpenWeatherMap, que fornece dados meteorológicos atualizados.",
             technologies: "Tecnologias: JavaScript, HTML, CSS, Angular, Bootstrap, API OpenWeatherMap",
             websiteURL: "https://gesleyoliveira.github.io/NewWeather/",
             codeURL: "https://github.com/GesleyOliveira/NewWeather",
         },
         {
-            title: "Project Exemple",
-            subtitle: "Jul 2023 - Dez 2023",
-            srcImg: "/src/assets/images/project-financas.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta semper velit vel rutrum. Aliquam vulputate, nisi eget tristique mattis, nisi sem faucibus eros, a auctor felis sem ut mauris. Phasellus a ultrices elit. Curabitur ut diam eu orci auctor pretium.",
-            technologies: "Technologies: JavaScript, HTML, CSS, Canvas Graphics",
-            websiteURL: "https://trello.com/",
+            title: "Cronomêtro Pomodoro",
+            subtitle: "Abril 2025 - Em desenvolvimento",
+            srcImg: pomodoroImg,
+            description: "Aplicação web desenvolvida para auxiliar estudantes na gestão do tempo durante sessões de estudo, utilizando a técnica Pomodoro. O cronômetro permite organizar períodos de foco e intervalos curtos de descanso, ajudando a aumentar a produtividade e manter a concentração.",
+            technologies: "Technologies: TypeScript, React.JS, CSS, Vite",
+            websiteURL: "https://github.com/GesleyOliveira/cronometroPomodoro",
             codeURL: "https://github.com/",
-        },
-        {
-            title: "Project Craze Maze",
-            subtitle: "Jul 2019 - May 2019",
-            srcImg: "/src/assets/images/project1-craze-maze.gif",
-            description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game",
-            technologies: "Technologies: JavaScript, HTML, CSS, Canvas Graphics",
-            websiteURL: "https://adrianasaty.github.io/ironhack-project1-craze-maze/index.html",
-            codeURL: "https://github.com/AdrianaSaty/ironhack-project1-craze-maze",
-        },
-        {
-            title: "Project Blotting",
-            subtitle: "Jul 2019 - May 2019",
-            srcImg: "/src/assets/images/project2-blotting.png",
-            description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game",
-            technologies: "Technologies: JavaScript, HTML, CSS, Canvas Graphics",
-            websiteURL: "https://adrianasaty.github.io/ironhack-project1-craze-maze/index.html",
-            codeURL: "https://github.com/AdrianaSaty/ironhack-project1-craze-maze",
         },
     ]
 
@@ -56,7 +40,7 @@ const Projects: React.FC = () => {
                 </Box>
                 <Grid container spacing={5} pb={3}>
                     {projects.map((project: ProjectCardProps, index: number) => (
-                        <Grid size={{md:6}}  key={index}>
+                        <Grid size={{md:6, xs:12}}  key={index} sx={{ display: 'flex' }}>
                             <AnimationComponent moveDirection={index % 2 == 0 ? "right" : "left"}>
                                 <ProjectCard
                                     title={project.title}

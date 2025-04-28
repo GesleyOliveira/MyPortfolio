@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 const isProduction = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
-  base: isProduction ? '/myPortfolio/' : '/',
+  base: isProduction ? '/MyPortfolio/' : '/',
   plugins: [react()],
   resolve: {
     alias: {

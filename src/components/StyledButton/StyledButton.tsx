@@ -35,3 +35,5 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
 };
 
 export default StyledButton;
+
+
