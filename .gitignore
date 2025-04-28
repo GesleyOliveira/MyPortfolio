@@ -10,6 +10,7 @@ lerna-debug.log*
 # Build output
 dist
 dist-ssr
+dist/
 
 # Vite cache
 .vite

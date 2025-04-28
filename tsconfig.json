@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "outDir": "./dist-ts",
+    "noEmit": true,
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -10,6 +12,13 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": [
+        "*"
+      ]
+    }
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }
