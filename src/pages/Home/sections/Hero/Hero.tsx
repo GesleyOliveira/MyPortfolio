@@ -5,7 +5,6 @@ import Avatar from "../../../../assets/images/avatar.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
-import theme from "../../../../../src/theme";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
 import Typewriter from "../../../../components/Typewriter/Typewriter"
 import CV from "../../../../assets/pdfs/Open.pdf"

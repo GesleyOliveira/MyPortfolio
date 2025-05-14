@@ -4,6 +4,7 @@ import AnimationComponent from "../../../../components/AnimationComponent/Animat
 import newWeatherImg from '@/assets/images/newweather.png';
 import pomodoroImg from '@/assets/images/pomodoro.png';
 import removedor from '@/assets/images/removedor.png';
+import n8n from '@/assets/images/n8n.png';
 
 const Projects: React.FC = () => {
 
@@ -39,6 +40,15 @@ const Projects: React.FC = () => {
             technologies: "Tecnologias: Python, Streamlit, Pillow, rembg, onnxruntime",
             websiteURL: "https://removedorfundo.streamlit.app/",
             codeURL: "https://github.com/GesleyOliveira/removedorFundo",
+        },
+        {
+            title: "Chat Integrado com IA",
+            subtitle: "Maio 2025 - Maio 2025",
+            srcImg: n8n,
+            description: "Aplicação web gerado pela ferramenta n8n, o projeto usa a API do Groq para gerar respostas a perguntas feitas pelo usuário.",
+            technologies: "Tecnologias: n8n, Modelo Groq chat",
+            websiteURL: "https://gesleyrosa.app.n8n.cloud/webhook/0ba085c1-089f-4a35-80f4-976bbaf0c478/chat",
+            codeURL: "https://gesleyrosa.app.n8n.cloud/workflow/9TncP6zIkOKJSaws",
         },
     ]
 
